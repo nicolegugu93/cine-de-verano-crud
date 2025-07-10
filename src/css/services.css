@@ -1,0 +1,76 @@
+/* styles.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+button {
+    padding: 8px 12px;
+    margin: 5px;
+    background-color: #ff3c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e60000;
+}
+
+form {
+    margin-bottom: 20px;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: #eee;
+}
+
+form button {
+    background-color: #1e90ff;
+}
+
+form button:hover {
+    background-color: #0066cc;
+}
+
+#film-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.film-card {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}

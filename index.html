@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title >🍿cine de verano🍿</title>
+    <link rel="stylesheet" href="./src/css/services.css">
 </head>
 <body>
     <button onclick="printFilms()">Cartelera</button>
+    <form id="film-form">
+    <input type="text" name="film" placeholder="Título" required />
+    <input type="text" name="director" placeholder="Director" required />
+    <input type="text" name="genre" placeholder="Género" required />
+    <input type="number" name="year" placeholder="Año" required />
+    <input type="text" name="duration" placeholder="Duración" required />
+    <input type="number" name="rating" placeholder="Calificación" required />
+    <input type="text" name="language" placeholder="Idioma" required />
+    <textarea name="film_description" placeholder="Descripción" required></textarea>
+    <button type="submit">Guardar</button>
+</form>
+
     <section id="film-section"></section>
     <script src="./src/services.js"></script>
 </body>

@@ -31,6 +31,7 @@ async function printFilms() {
                 <p><strong>Idioma:</strong> ${film.language}</p>
                 <p><strong>Descripción:</strong> ${film.film_description}</p>
                 <button onclick="deleteFilm('${film.id}')">Eliminar</button>
+                <button onclick="loadFilmToForm('${film.id}')">Editar</button>
             </div>
         `;
     });
@@ -84,7 +85,7 @@ filmForm.addEventListener("submit", function(event) {
     const editingId = filmForm.dataset.editing;
 
     if (editingId) {
-        updatefilm(editingId, newFilm);
+        updateFilm(editingId, newFilm);
         delete filmForm.dataset.editing;
     } else {
         createFilm(newFilm);
@@ -93,4 +94,50 @@ filmForm.addEventListener("submit", function(event) {
     filmForm.reset(); 
 });
 
+
+// Update PUT Method
+async function updateFilm(id, editedFilm) {
+    try {
+        const response = await fetch(`http://localhost:3000/movies/${id}`, {
+            method: "PUT",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(editedFilm)
+        });
+
+        if (response.ok) {
+            const updatedFilm = await response.json();
+            console.log("Pelicula actualizada:", updatedFilm);
+            printFilms(); // Refresca la lista
+        } else {
+            console.error("Error al actualizar la pelicula");
+        }
+    } catch (error) {
+        console.error("Error en la solicitud PUT:", error);
+    }
+}
+
+
+async function loadFilmToForm(id) {
+    const response = await fetch(`http://localhost:3000/movies/${id}`);
+    if (response.ok) {
+        const film = await response.json();
+
+        // Rellenar el formulario
+        document.querySelector('[name="film"]').value = film.film;
+        document.querySelector('[name="director"]').value = film.director;
+        document.querySelector('[name="genre"]').value = film.genre;
+        document.querySelector('[name="year"]').value = film.year;
+        document.querySelector('[name="duration"]').value = film.duration;
+        document.querySelector('[name="rating"]').value = film.rating;
+        document.querySelector('[name="language"]').value = film.language;
+        document.querySelector('[name="film_description"]').value = film.film_description;
+
+        // Guardar el ID en el formulario para saber que estamos editando
+        filmForm.dataset.editing = id;
+    } else {
+        console.error("No se pudo cargar la pelicula para editar");
+    }
+}
 

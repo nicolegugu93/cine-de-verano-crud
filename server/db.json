@@ -1,15 +1,15 @@
 {
   "movies": [
     {
-      "id": "1",
       "film": "El Gran Pez (Big Fish)",
       "director": "Tim Burton",
       "genre": "Fantasy, Drama, Magic Realism",
-      "year": 2003,
-      "duration": 125,
-      "rating": 8.0,
+      "year": "2003",
+      "duration": "125",
+      "rating": "8",
       "language": "English",
-      "film_description": "Un hijo intenta conocer mejor a su padre moribundo a través de los cuentos fantásticos que este ha narrado toda su vida. La película combina elementos mágicos con emociones profundas, explorando la línea entre realidad y ficción."
+      "film_description": "Un hijo intenta conocer mejor a su padre moribundo a través de los cuentos fantásticos que este ha narrado toda su vida. La película combina elementos mágicos con emociones profundas, explorando la línea entre realidad y ficción. ",
+      "id": "1"
     },
     {
       "id": "2",
