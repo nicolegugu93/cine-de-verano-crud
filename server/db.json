@@ -1,0 +1,125 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "film": "El Gran Pez (Big Fish)",
+      "director": "Tim Burton",
+      "genre": "Fantasy, Drama, Magic Realism",
+      "year": 2003,
+      "duration": 125,
+      "rating": 8.0,
+      "language": "English",
+      "film_description": "Un hijo intenta conocer mejor a su padre moribundo a través de los cuentos fantásticos que este ha narrado toda su vida. La película combina elementos mágicos con emociones profundas, explorando la línea entre realidad y ficción."
+    },
+    {
+      "id": "2",
+      "film": "Una Cuestión de tiempo (About Time)",
+      "director": "Richard Curtis",
+      "genre": "Romance, Drama, Fantasy",
+      "year": 2013,
+      "duration": 123,
+      "rating": 7.8,
+      "language": "English",
+      "film_description": "Un joven descubre que puede viajar en el tiempo y usa este don para mejorar su vida amorosa y familiar. Más allá de la ciencia ficción, la película se centra en el valor de las pequeñas cosas cotidianas y la importancia del presente."
+    },
+    {
+      "id": "3",
+      "film": "Medianoche en París (Midnight in Paris)",
+      "director": "Woody Allen",
+      "genre": "Romance, Fantasy, Comedy",
+      "year": 2011,
+      "duration": 94,
+      "rating": 7.7,
+      "language": "English",
+      "film_description": "Un escritor nostálgico viaja misteriosamente a la década de 1920 cada medianoche mientras está de vacaciones en París. En sus aventuras, conoce a grandes figuras de la literatura y el arte, reflexionando sobre la idealización del pasado."
+    },
+    {
+      "id": "4",
+      "film": "La forma del agua (The Shape of Water)",
+      "director": "Guillermo del Toro",
+      "genre": "Fantasy, Romance, Drama",
+      "year": 2017,
+      "duration": 123,
+      "rating": 7.3,
+      "language": "English",
+      "film_description": "Durante la Guerra Fría, una mujer muda que trabaja en un laboratorio gubernamental forma un vínculo único con una criatura anfibia capturada. La película es una fábula moderna sobre la empatía, el amor y la aceptación de lo diferente."
+    },
+    {
+      "id": "5",
+      "film": "El curioso caso de Benjamin Button (The Curious Case of Benjamin Button)",
+      "director": "David Fincher",
+      "genre": "Fantasy, Drama, Romance",
+      "year": 2008,
+      "duration": 166,
+      "rating": 7.8,
+      "language": "English",
+      "film_description": "Un hombre nace con el cuerpo de un anciano y rejuvenece a medida que pasa el tiempo. La historia recorre su inusual vida marcada por el amor, la pérdida y el paso del tiempo."
+    },
+    {
+      "id": "6",
+      "film": "El laberinto del Fauno (Pan's Labyrinth)",
+      "director": "Guillermo del Toro",
+      "genre": "Fantasy, Drama, War",
+      "year": 2006,
+      "duration": 118,
+      "rating": 8.2,
+      "language": "Spanish",
+      "film_description": "En la España franquista, una niña escapa del horror de la guerra a través de un mundo mágico lleno de criaturas y desafíos. Una fábula oscura que mezcla la fantasía con la realidad política."
+    },
+    {
+      "id": "7",
+      "film": "Amélie",
+      "director": "Jean-Pierre Jeunet",
+      "genre": "Romance, Comedy, Fantasy",
+      "year": 2001,
+      "duration": 122,
+      "rating": 8.3,
+      "language": "French",
+      "film_description": "Amélie es una joven soñadora que transforma la vida de quienes la rodean mediante pequeños actos de bondad, mientras busca el amor y su lugar en el mundo. Una oda a la belleza de lo cotidiano."
+    },
+    {
+      "id": "8",
+      "film": "La vida secreta de Walter Mitty (The Secret Life of Walter Mitty)",
+      "director": "Ben Stiller",
+      "genre": "Adventure, Comedy, Drama, Fantasy",
+      "year": 2013,
+      "duration": 114,
+      "rating": 7.3,
+      "language": "English",
+      "film_description": "Un hombre común se embarca en una aventura extraordinaria tras años de soñar despierto. La película mezcla lo real y lo imaginario en un viaje de autodescubrimiento."
+    },
+    {
+      "id": "9",
+      "film": "Eterno resplandor de una mente sin recuerdos (Eternal Sunshine of the Spotless Mind)",
+      "director": "Michel Gondry",
+      "genre": "Drama, Romance, Sci-Fi",
+      "year": 2004,
+      "duration": 108,
+      "rating": 8.3,
+      "language": "English",
+      "film_description": "Tras una ruptura dolorosa, una pareja decide borrar todos los recuerdos de su relación. La historia viaja entre la mente y el corazón, cuestionando si olvidar es la mejor forma de seguir adelante."
+    },
+    {
+      "id": "10",
+      "film": "The fall: El sueño de Alexandria (The Fall)",
+      "director": "Tarsem Singh",
+      "genre": "Adventure, Drama, Fantasy",
+      "year": 2006,
+      "duration": 117,
+      "rating": 7.8,
+      "language": "English",
+      "film_description": "Un doble de cine herido relata una historia épica a una niña pequeña en un hospital. A medida que la ficción avanza, se entrelaza con sus propias emociones y realidades."
+    },
+    {
+      "id": "11",
+      "film": "Bestias del sur salvaje (Beasts of the Southern Wild)",
+      "director": "Benh Zeitlin",
+      "genre": "Drama, Fantasy",
+      "year": 2012,
+      "duration": 93,
+      "rating": 7.2,
+      "language": "English",
+      "film_description": "Una niña fuerte y valiente vive en una comunidad aislada con su padre enfermo. Cuando la naturaleza se vuelve caótica, ella se enfrenta al mundo con imaginación y coraje."
+    }
+  ]
+}
