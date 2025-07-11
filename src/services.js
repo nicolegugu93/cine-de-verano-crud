@@ -16,26 +16,46 @@ getFilms()
 let filmContainer = document.getElementById("film-section");
 
 async function printFilms() {
-    let listFilms = await getFilms();
-    filmContainer.innerHTML = ""; // Limpiar contenido anterior
+    const listFilms = await getFilms();
+    const filmContainer = document.getElementById("film-section");
+    filmContainer.innerHTML = "";
 
     listFilms.forEach(film => {
-        filmContainer.innerHTML += `
+        let images = Array.isArray(film.images)
+            ? film.images
+            : (film.images || "").split(',').map(img => img.trim());
+
+        const frontImage = images[0]
+            ? `<img src="/public/${images[0]}" alt="${film.film}" />`
+            : `<div style="color:white">Sin imagen</div>`;
+
+        const filmCardHTML = `
             <div class="film-card">
-                <h1>${film.film}</h1> 
-                <p><strong>Director:</strong> ${film.director}</p>
-                <p><strong>Género:</strong> ${film.genre}</p>
-                <p><strong>Año:</strong> ${film.year}</p>
-                <p><strong>Duración:</strong> ${film.duration}</p>
-                <p><strong>Calificación:</strong> ${film.rating}</p>
-                <p><strong>Idioma:</strong> ${film.language}</p>
-                <p><strong>Descripción:</strong> ${film.film_description}</p>
-                <button onclick="deleteFilm('${film.id}')">Eliminar</button>
-                <button onclick="loadFilmToForm('${film.id}')">Editar</button>
+                <div class="film-inner">
+                    <div class="film-front">
+                        ${frontImage}
+                    </div>
+                    <div class="film-back">
+                        <h1>${film.film}</h1> 
+                        <p><strong>Director:</strong> ${film.director}</p>
+                        <p><strong>Género:</strong> ${film.genre}</p>
+                        <p><strong>Año:</strong> ${film.year}</p>
+                        <p><strong>Duración:</strong> ${film.duration}</p>
+                        <p><strong>Calificación:</strong> ${film.rating}</p>
+                        <p><strong>Idioma:</strong> ${film.language}</p>
+                        <p><strong>Descripción:</strong> ${film.film_description}</p>
+                        <button onclick="deleteFilm('${film.id}')">Eliminar</button>
+                        <button onclick="loadFilmToForm('${film.id}')">Editar</button>
+                    </div>
+                </div>
             </div>
         `;
+
+        filmContainer.innerHTML += filmCardHTML;
     });
 }
+
+
 
 // Delete DELETE Method
 async function deleteFilm(id) {
@@ -82,6 +102,12 @@ filmForm.addEventListener("submit", function(event) {
     const formData = new FormData(filmForm);
     const newFilm = Object.fromEntries(formData.entries());
 
+    // --- PASO 3: convertir el campo 'images' de string a array ---
+    if (newFilm.images) {
+        newFilm.images = newFilm.images.split(',').map(img => img.trim());
+    }
+    // ---------------------------------------------------------------
+
     const editingId = filmForm.dataset.editing;
 
     if (editingId) {
@@ -93,6 +119,7 @@ filmForm.addEventListener("submit", function(event) {
 
     filmForm.reset(); 
 });
+
 
 
 // Update PUT Method
@@ -133,6 +160,8 @@ async function loadFilmToForm(id) {
         document.querySelector('[name="rating"]').value = film.rating;
         document.querySelector('[name="language"]').value = film.language;
         document.querySelector('[name="film_description"]').value = film.film_description;
+
+        document.querySelector('[name="images"]').value = film.images?.join(', ') || '';
 
         // Guardar el ID en el formulario para saber que estamos editando
         filmForm.dataset.editing = id;

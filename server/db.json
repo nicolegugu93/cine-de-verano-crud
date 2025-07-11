@@ -1,6 +1,7 @@
 {
   "movies": [
     {
+      "id": "1",
       "film": "El Gran Pez (Big Fish)",
       "director": "Tim Burton",
       "genre": "Fantasy, Drama, Magic Realism",
@@ -9,7 +10,7 @@
       "rating": "8",
       "language": "English",
       "film_description": "Un hijo intenta conocer mejor a su padre moribundo a través de los cuentos fantásticos que este ha narrado toda su vida. La película combina elementos mágicos con emociones profundas, explorando la línea entre realidad y ficción. ",
-      "id": "1"
+      "image": "/public/bigfish.webp"
     },
     {
       "id": "2",
@@ -120,6 +121,23 @@
       "rating": 7.2,
       "language": "English",
       "film_description": "Una niña fuerte y valiente vive en una comunidad aislada con su padre enfermo. Cuando la naturaleza se vuelve caótica, ella se enfrenta al mundo con imaginación y coraje."
+    },
+    {
+      "film": "Conoces a Joe Black? (Meet Joe Blac)",
+      "director": "Martin Brest",
+      "genre": "Fantasy, Drama, romance",
+      "year": "1999",
+      "duration": "181",
+      "rating": "7",
+      "language": "English",
+      "film_description": "Antes de su 65 cumpleaños, el empresario William Parrish es visitado por la muerte. Parrish realizara un trato con su visitante para poder pasar más tiempo en la tierra, y así la muerte podra saber que significa estar vivo. ",
+      "images": [
+        "bigfish.webp",
+        "aboutime.jpg",
+        "midnightinparis.webp",
+        "..."
+      ],
+      "id": "4cba"
     }
   ]
 }

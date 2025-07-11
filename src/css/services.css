@@ -74,3 +74,60 @@ form button:hover {
     width: 300px;
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 }
+
+
+/*tarjetas que giran*/
+/* Contenedor de la tarjeta */
+.film-card {
+    width: 300px;
+    height: 450px;
+    perspective: 1000px;
+}
+
+/* Parte interior que gira */
+.film-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Gira al pasar el mouse */
+.film-card:hover .film-inner {
+    transform: rotateY(180deg);
+}
+
+/* Caras de la tarjeta */
+.film-front, .film-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Cara frontal */
+.film-front {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.film-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Cara trasera */
+.film-back {
+    background-color: #111;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
